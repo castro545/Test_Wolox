@@ -2,7 +2,9 @@
   <div class="home">
     <Welcome />
     <Container />
-    <section :id="'Beneficios'"><Beneficios /></section>
+    <section id="beneficios">
+      <Beneficios />
+    </section>
     <Footer />
   </div>
 </template>

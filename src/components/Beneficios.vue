@@ -35,8 +35,9 @@
 <style scoped>
 img {
   max-width: 20vw;
-  height: 20vh;
+  height: 10vh;
 }
+
 #container {
   margin-top: 30px;
   margin-bottom: 130px;
@@ -57,26 +58,31 @@ img {
   grid-column-gap: 10px;
   grid-row-gap: 1em;
 }
+
 @media (min-width: 400px) {
   #item2 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (min-width: 600px) {
   #item2 {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media (min-width: 800px) {
   #item2 {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
 @media (min-width: 1000px) {
   #item2 {
     grid-template-columns: repeat(6, 1fr);
   }
 }
+
 p {
   text-align: center;
   font-family: "Montserrat";
@@ -84,6 +90,7 @@ p {
   font-style: bold;
   font-size: 30px;
 }
+
 h2 {
   text-align: center;
   font-family: "Montserrat";
@@ -91,9 +98,11 @@ h2 {
   font-style: bold;
   font-size: 15px;
 }
+
 span {
   font-family: "MontserratBold";
 }
+
 span:first-child {
   font-weight: 500;
   color: #2197cd;

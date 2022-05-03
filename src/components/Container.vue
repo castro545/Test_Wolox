@@ -1,36 +1,25 @@
 <template>
   <div id="container">
     <div>
-      <img
-        :srcset="
-          require('../assets/img_woloxer@2x.png') +
-          ' 1x, ' +
-          require('../assets/img_woloxer@3x.png') +
-          ' 2x'
-        "
-        :src="require('../assets/img_woloxer.png')"
-      />
+      <img :srcset="
+        require('../assets/img_woloxer@2x.png') +
+        ' 1.5x, ' +
+        require('../assets/img_woloxer@3x.png') +
+        ' 2.5x'
+      " :src="require('../assets/img_woloxer.png')" />
       <div class="centrado">
         <p>
-          <span :style="{ color: '#97cf00' }">350 +</span
-          ><span :style="{ color: '#2197cd' }"> Wolowers</span>
+          <span :style="{ color: '#97cf00' }">350 +</span><span :style="{ color: '#2197cd' }"> Wolowers</span>
         </p>
         <div id="sub-container">
           <div>
-            <img
-              :src="require('../assets/Ic_twitter.svg')"
-              :style="{ verticalAlign: 'middle' }"
-            />
+            <img :src="require('../assets/Ic_twitter.svg')" :style="{ verticalAlign: 'middle' }" />
             <span :style="{ color: '#fff' }"> @ Wolox </span>
           </div>
         </div>
         <div>
-          <button
-            type="button"
-            onclick="window.open('https://twitter.com/wolox')"
-            @click="showAlert()"
-            class="btn btn-animate"
-          >
+          <button type="button" onclick="window.open('https://twitter.com/wolox')" @click="showAlert()"
+            class="btn btn-animate">
             Siguenos
           </button>
         </div>
@@ -49,6 +38,7 @@ img {
   max-width: 100%;
   height: 90%;
 }
+
 #container {
   background-color: #b4b8a938;
   max-width: 100vw;
@@ -58,6 +48,7 @@ img {
   display: grid;
   align-items: center;
 }
+
 #container div:first-child {
   position: relative;
   display: inline-block;
@@ -65,21 +56,25 @@ img {
   grid-column-start: 1;
   grid-column-end: 5;
 }
+
 #container div:last-child {
   grid-column-start: 6;
   grid-column-end: 7;
 }
+
 .sub-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .centrado {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 p {
   text-align: center;
   font-family: "Montserrat";
@@ -87,16 +82,20 @@ p {
   font-style: bold;
   font-size: 40px;
 }
+
 span {
   font-family: "MontserratBold";
 }
+
 span:first-child {
   font-weight: 500;
   color: #2197cd;
 }
+
 span:last-child {
   color: #97cf00;
 }
+
 .btn {
   font-family: "Fira Sans";
   border: 2px solid #2197cd;
@@ -111,6 +110,7 @@ span:last-child {
   height: 25px;
   transition-duration: 0.4s;
 }
+
 .btn:link,
 .btn:hover {
   transform: translateY(-4px);
@@ -118,10 +118,12 @@ span:last-child {
   background: #318aac;
   color: #fff !important;
 }
+
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
 .btn::after {
   content: "";
   display: inline-block;

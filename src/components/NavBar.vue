@@ -7,14 +7,12 @@
       <router-link to="/">Inicio</router-link>
     </div>
     <div>
-      <router-link :to="`/#Beneficios`">Beneficios</router-link>
+      <a href="/#beneficios">Beneficios</a>
     </div>
     <div>
-      <button
-        type="button"
+      <button type="button"
         onclick="window.open('https://www.accenture.com/Authentication/LogOnModal/Signup?returnUrl=%2fco-es%2fcareers')"
-        class="btnLogin btnLogin-animate"
-      >
+        class="btnLogin btnLogin-animate">
         Login
       </button>
     </div>
@@ -34,6 +32,7 @@ img {
   width: 150px;
   height: 70px;
 }
+
 .imgPoke {
   width: 50px;
   height: 50px;

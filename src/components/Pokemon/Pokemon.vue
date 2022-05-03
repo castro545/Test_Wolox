@@ -2,13 +2,41 @@
   <div class="container">
     <h1>Pokemon's</h1>
     <PokemonSearch :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
-    <PokemonList />
+    <PokemonList :imageUrl="imageUrl" :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
+    <PokemonDetail v-if="showDetail" :pokemonUrl="pokemonUrl" :imageUrl="imageUrl" @closeDetail="closeDetail" />
   </div>
 </template>
 
-<script setup>
-import PokemonSearch from "./PokemonSearch.vue";
-import PokemonList from "./PokemonList.vue";
+<script >
+import PokemonSearch from './PokemonSearch.vue';
+import PokemonList from './PokemonList.vue';
+import PokemonDetail from './PokemonDetail.vue';
+import API from '../../API/apiUrl.js';
+export default {
+  data: () => {
+    return {
+      imageUrl: API.PokemonImg,
+      apiUrl: API.PokemonApi,
+      pokemonUrl: '',
+      showDetail: false
+    }
+  },
+  components: {
+    PokemonSearch,
+    PokemonList,
+    PokemonDetail
+  },
+  methods: {
+    setPokemonUrl(url) {
+      this.pokemonUrl = url;
+      this.showDetail = true;
+    },
+    closeDetail() {
+      this.pokemonUrl = '';
+      this.showDetail = false;
+    }
+  }
+}
 </script>
 
 <style scoped>
