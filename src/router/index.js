@@ -1,6 +1,7 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Beneficios from "../components/Beneficios.vue";
+import Pokemon from "../components/Pokemon/Pokemon.vue";
 import Layout from "../layout/Layout.vue";
 const routes = [
   {
@@ -15,6 +16,11 @@ const routes = [
     path: "/Beneficios",
     name: "Beneficios",
     component: Beneficios,
+  },
+  {
+    path: "/Pokemon",
+    name: "Pokemon",
+    component: Pokemon,
     meta: {
       layout: Layout,
     },
@@ -22,16 +28,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    console.log(savedPosition);
-    if (savedPosition) {
-      return savedPosition;
-    } else {
-      return { top: 0 };
-    }
-  },
 });
 
 export default router;

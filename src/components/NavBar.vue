@@ -7,7 +7,7 @@
       <router-link to="/">Inicio</router-link>
     </div>
     <div>
-      <router-link to="/Beneficios">Beneficios</router-link>
+      <router-link :to="`/#Beneficios`">Beneficios</router-link>
     </div>
     <div>
       <button
@@ -19,7 +19,9 @@
       </button>
     </div>
     <div>
-      <div class="btnPoke btnPoke-animate"></div>
+      <router-link to="/Pokemon">
+        <div class="btnPoke btnPoke-animate"></div>
+      </router-link>
     </div>
   </div>
 </template>

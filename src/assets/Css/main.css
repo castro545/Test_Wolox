@@ -18,7 +18,8 @@
 
 #home {
   overflow-x: hidden;
-
+  box-sizing: border-box;
+  position: relative;
 }
 
 #nav {

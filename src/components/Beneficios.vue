@@ -46,6 +46,7 @@ img {
   grid-template-columns: 100%;
   grid-template-rows: repeat(6, 1fr);
 }
+
 #item1 {
   background-color: #fff;
 }
@@ -53,9 +54,28 @@ img {
 #item2 {
   grid-row: 2 / 4;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 1em;
+}
+@media (min-width: 400px) {
+  #item2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 600px) {
+  #item2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  #item2 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 1000px) {
+  #item2 {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 p {
   text-align: center;

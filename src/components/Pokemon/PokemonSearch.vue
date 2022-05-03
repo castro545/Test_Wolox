@@ -1,7 +1,11 @@
 <template>
   <div class="searchbar">
     <form @submit.prevent="setPokemonUrl">
-      <input type="text" v-model="searchvalue" />
+      <input
+        type="text"
+        v-model="searchvalue"
+        placeholder="Busca tu pokemon  "
+      />
     </form>
     <i class="fas fa-search" @click="setPokemonUrl"></i>
   </div>
@@ -16,7 +20,7 @@ export default {
     };
   },
   methods: {
-    setPokemonUrl(url) {
+    setPokemonUrl() {
       if (this.searchvalue !== "")
         this.$emit("setPokemonUrl", this.apiUrl + this.searchvalue);
     },
@@ -26,7 +30,6 @@ export default {
 
 <style scoped>
 .searchbar {
-  position: relative;
   width: 100%;
   max-width: 510px;
   padding-bottom: 20px;
