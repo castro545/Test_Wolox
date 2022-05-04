@@ -4,15 +4,17 @@
       <img :src="require('../assets/logo_full_color.svg')" />
     </div>
     <div>
-      <router-link to="/">Inicio</router-link>
+      <router-link to="/">{{ $t("btn.home") }}</router-link>
     </div>
     <div>
-      <a href="/#beneficios">Beneficios</a>
+      <a href="/#beneficios">{{ $t("btn.benefit") }}</a>
     </div>
     <div>
-      <button type="button"
+      <button
+        type="button"
         onclick="window.open('https://www.accenture.com/Authentication/LogOnModal/Signup?returnUrl=%2fco-es%2fcareers')"
-        class="btnLogin btnLogin-animate">
+        class="btnLogin btnLogin-animate"
+      >
         Login
       </button>
     </div>
@@ -20,6 +22,16 @@
       <router-link to="/Pokemon">
         <div class="btnPoke btnPoke-animate"></div>
       </router-link>
+    </div>
+    <div>
+      <select v-model="$i18n.locale" class="rounded-md p-1">
+        <option value="es">
+          <p>{{ $t("select.spanish") }}</p>
+        </option>
+        <option value="en">
+          <p>{{ $t("select.english") }}</p>
+        </option>
+      </select>
     </div>
   </div>
 </template>

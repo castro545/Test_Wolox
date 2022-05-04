@@ -4,7 +4,7 @@
       <input
         type="text"
         v-model="searchvalue"
-        placeholder="Busca tu pokemon  "
+        :placeholder="$t('placeholder')"
       />
     </form>
     <i class="fas fa-search" @click="setPokemonUrl"></i>

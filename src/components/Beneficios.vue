@@ -1,32 +1,32 @@
 <template>
   <div id="container">
     <div id="item1">
-      <p>Entre los beneficios que te ofrecemos se encuentran <span>;)</span></p>
+      <p>{{ $t("beneficial.ben") }} <span>;)</span></p>
     </div>
     <div id="item2">
       <div>
         <img :src="require('../assets/Ic_Hour.svg')" />
-        <h2>Flexibilidad Horaria</h2>
+        <h2>{{ $t("beneficial.flexHours") }}</h2>
       </div>
       <div>
         <img :src="require('../assets/Ic_HomeOffice.svg')" />
-        <h2>Home Office</h2>
+        <h2>{{ $t("beneficial.homeOffice") }}</h2>
       </div>
       <div>
         <img :src="require('../assets/Ic_Workshops.svg')" />
-        <h2>Capacitaciones y workshops</h2>
+        <h2>{{ $t("beneficial.workshops") }}</h2>
       </div>
       <div>
         <img :src="require('../assets/Ic_DrinkSnacks.svg')" />
-        <h2>Snacks,frutas y bebidas gratis</h2>
+        <h2>{{ $t("beneficial.snack") }}</h2>
       </div>
       <div>
         <img :src="require('../assets/Ic_laptop.svg')" />
-        <h2>Semana remota</h2>
+        <h2>{{ $t("beneficial.week") }}</h2>
       </div>
       <div>
         <img :src="require('../assets/Ic_brain.svg')" />
-        <h2>Trabajar en ultimas tecnologías</h2>
+        <h2>{{ $t("beneficial.technology") }}</h2>
       </div>
     </div>
   </div>

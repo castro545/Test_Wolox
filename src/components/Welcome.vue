@@ -9,7 +9,8 @@
     >
       <div>
         <p>
-          Bienvenido a tu <span>Entrevista Técnica </span>en
+          {{ $t("home.welcome") }} <span>{{ $t("home.interview") }} </span>
+          {{ $t("home.in") }}
           <span> WOLOX</span>
         </p>
       </div>
@@ -17,9 +18,9 @@
         <img
           :srcset="
             require('../assets/ImgHero/Ic_ilustra_Hero@2x.png') +
-            ' 1x, ' +
+            ' 1.5x, ' +
             require('../assets/ImgHero/Ic_ilustra_Hero@3x.png') +
-            ' 2x'
+            ' 2.5x'
           "
           :src="require('../assets/ImgHero/Ic_ilustra_Hero.png')"
         />
@@ -31,21 +32,13 @@
 <script setup></script>
 <style scoped>
 img {
-  width: 100%;
+  width: 50%;
   height: auto;
 }
-.content {
-  width: 100vw;
-  grid-auto-columns: minmax(100px, auto);
-  column-gap: 40px;
-  overflow: hidden;
-  display: grid;
-  align-items: center;
-  margin: 15px 0px 15px 25px;
-}
+
 .flexbox-container {
-  width: 90vw;
-  height: 100vh;
+  width: 100vw;
+  height: 70vh;
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;

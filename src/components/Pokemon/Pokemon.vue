@@ -2,29 +2,38 @@
   <div class="container">
     <h1>Pokemon's</h1>
     <PokemonSearch :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
-    <PokemonList :imageUrl="imageUrl" :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
-    <PokemonDetail v-if="showDetail" :pokemonUrl="pokemonUrl" :imageUrl="imageUrl" @closeDetail="closeDetail" />
+    <PokemonList
+      :imageUrl="imageUrl"
+      :apiUrl="apiUrl"
+      @setPokemonUrl="setPokemonUrl"
+    />
+    <PokemonDetail
+      v-if="showDetail"
+      :pokemonUrl="pokemonUrl"
+      :imageUrl="imageUrl"
+      @closeDetail="closeDetail"
+    />
   </div>
 </template>
 
-<script >
-import PokemonSearch from './PokemonSearch.vue';
-import PokemonList from './PokemonList.vue';
-import PokemonDetail from './PokemonDetail.vue';
-import API from '../../API/apiUrl.js';
+<script>
+import PokemonSearch from "./PokemonSearch.vue";
+import PokemonList from "./PokemonList.vue";
+import PokemonDetail from "./PokemonDetail.vue";
+import API from "../../API/ApiUrl";
 export default {
   data: () => {
     return {
       imageUrl: API.PokemonImg,
       apiUrl: API.PokemonApi,
-      pokemonUrl: '',
-      showDetail: false
-    }
+      pokemonUrl: "",
+      showDetail: false,
+    };
   },
   components: {
     PokemonSearch,
     PokemonList,
-    PokemonDetail
+    PokemonDetail,
   },
   methods: {
     setPokemonUrl(url) {
@@ -32,15 +41,16 @@ export default {
       this.showDetail = true;
     },
     closeDetail() {
-      this.pokemonUrl = '';
+      this.pokemonUrl = "";
       this.showDetail = false;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
 .container {
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,33 +1,45 @@
 <template>
   <div id="container">
     <div>
-      <img :srcset="
-        require('../assets/img_woloxer@2x.png') +
-        ' 1.5x, ' +
-        require('../assets/img_woloxer@3x.png') +
-        ' 2.5x'
-      " :src="require('../assets/img_woloxer.png')" />
+      <img
+        :srcset="
+          require('../assets/img_woloxer@2x.png') +
+          ' 1.5x, ' +
+          require('../assets/img_woloxer@3x.png') +
+          ' 2.5x'
+        "
+        :src="require('../assets/img_woloxer.png')"
+      />
       <div class="centrado">
         <p>
-          <span :style="{ color: '#97cf00' }">350 +</span><span :style="{ color: '#2197cd' }"> Wolowers</span>
+          <span :style="{ color: '#97cf00' }">350 +</span
+          ><span :style="{ color: '#2197cd' }"> Wolowers</span>
         </p>
         <div id="sub-container">
           <div>
-            <img :src="require('../assets/Ic_twitter.svg')" :style="{ verticalAlign: 'middle' }" />
+            <img
+              :src="require('../assets/Ic_twitter.svg')"
+              :style="{ verticalAlign: 'middle' }"
+            />
             <span :style="{ color: '#fff' }"> @ Wolox </span>
           </div>
         </div>
         <div>
-          <button type="button" onclick="window.open('https://twitter.com/wolox')" @click="showAlert()"
-            class="btn btn-animate">
-            Siguenos
+          <button
+            type="button"
+            onclick="window.open('https://twitter.com/wolox')"
+            @click="showAlert()"
+            class="btn btn-animate"
+          >
+            {{ $t("btn.follow") }}
           </button>
         </div>
       </div>
     </div>
     <div :style="{ width: '75%' }">
       <p>
-        Trabajamos para <span>convertir </span><span>ideas </span>en productos.
+        {{ $t("work.workin") }} <span> {{ $t("work.conver") }} </span
+        ><span> {{ $t("work.idea") }} </span> {{ $t("work.products") }}
       </p>
     </div>
   </div>

@@ -1,0 +1,41 @@
+{
+  "home": {
+    "welcome": "Bienvenido a tu",
+    "interview": "Entrevista Tecnica",
+    "in": "en"
+  },
+  "work": {
+    "workin": "Trabajamos para ",
+    "conver": "convertir ",
+    "idea": "ideas ",
+    "products": "en productos. "
+  },
+  "beneficial": {
+    "ben": "Entre los beneficios que te ofrecemos se encuentran",
+    "flexHours": "Flexibilidad Horaria",
+    "homeOffice": "HomeOffice",
+    "workshops": "Capacitaciones y workshops",
+    "snack": "Snacks,frutas y bebidas gratis",
+    "week": "Semana remota",
+    "technology": "Trabajar en ultimas tecnologías"
+  },
+  "footer": {
+    "thanks": "Gracias por",
+    "complet": "completar el ejercicio",
+    "invit": "Te invitamos a ver mas información"
+  },
+  "btn": {
+    "home": "Inicio",
+    "benefit": "Beneficios",
+    "follow": "Siguienos",
+    "learn": "Conoce más",
+    "next": "Siguiente",
+    "previous": "Atras",
+    "close": "Cerrar"
+  },
+  "select": {
+    "spanish": "Español",
+    "english": "Ingles"
+  },
+  "placeholder": "Busca tu Pokemon"
+}

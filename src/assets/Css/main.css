@@ -22,6 +22,36 @@
   position: relative;
 }
 
+/* Custom Select wrapper */
+select {
+  margin: 15px;
+  position: relative;
+  display: flex;
+  border: 2px solid #2197cd;
+  border-radius: 15px;
+  width: 6em;
+  height: 2em;
+  overflow: hidden;
+  text-align: center
+}
+
+/* Arrow */
+select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+
+/* Transition */
+select:hover::after {
+  color: #f39c12;
+}
+
 #nav {
   background-image: url('../Backgrounds/Bg_Header.png');
   background-color: rgb(253, 250, 250);

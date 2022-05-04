@@ -1,24 +1,39 @@
 <template>
   <div class="list">
-    <div v-for="(pokemon, index) in pokemons" :key="'poke' + index" @click="setPokemonUrl(pokemon.url)" name="pokemons">
-      <img :src="imageUrl + pokemon.id + '.png'" width="90" height="90" alt="" />
+    <div
+      v-for="(pokemon, index) in pokemons"
+      :key="'poke' + index"
+      @click="setPokemonUrl(pokemon.url)"
+      name="pokemons"
+    >
+      <img
+        :src="imageUrl + pokemon.id + '.png'"
+        width="90"
+        height="90"
+        alt=""
+      />
       <h3>{{ pokemon.name }}</h3>
     </div>
   </div>
   <ul class="pagination">
-    <li><a class="btnLogin btnLogin-animate" @click="previusPage()">Atras</a></li>
+    <li v-if="previusUrl">
+      <a class="btnLogin btnLogin-animate" @click="previusPage()">{{
+        $t("btn.previous")
+      }}</a>
+    </li>
 
-    <li><a class="btnLogin btnLogin-animate" @click="nextPage()">Siguiente</a></li>
+    <li>
+      <a class="btnLogin btnLogin-animate" @click="nextPage()">{{
+        $t("btn.next")
+      }}</a>
+    </li>
   </ul>
 </template>
 <script>
 import axios from "axios";
 export default {
-  name: 'PokemonList',
-  props: [
-    'imageUrl',
-    'apiUrl'
-  ],
+  name: "PokemonList",
+  props: ["imageUrl", "apiUrl"],
   data: () => {
     return {
       elementPage: 20,
@@ -43,7 +58,7 @@ export default {
             .pop();
           this.pokemons.push(pokemon);
           return data;
-        })
+        });
       } catch (error) {
         console.log(error);
       }
@@ -61,8 +76,8 @@ export default {
       this.listData();
     },
     setPokemonUrl(url) {
-      this.$emit('setPokemonUrl', url);
-    }
+      this.$emit("setPokemonUrl", url);
+    },
   },
   created() {
     this.currentUrl = this.apiUrl;
@@ -74,7 +89,7 @@ export default {
 <style scoped>
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-gap: 10px;
   width: 100%;
   max-width: 80%;
@@ -126,4 +141,3 @@ ul.pagination li a.active {
   color: white;
 }
 </style>
- 

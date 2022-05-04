@@ -1,11 +1,13 @@
 <template>
   <div id="container">
     <div>
-      <h1>Gracias por<span> completar el ejercicio</span></h1>
+      <h1>
+        {{ $t("footer.thanks") }} <span> {{ $t("footer.complet") }}</span>
+      </h1>
     </div>
     <div id="items">
       <div>
-        <h2>Te invitamos a ver mas información</h2>
+        <h2>{{ $t("footer.invit") }}</h2>
       </div>
       <div>
         <button
@@ -13,7 +15,7 @@
           onclick="window.open('https://www.wolox.com.ar/')"
           class="btnConocer btnConocer-animate"
         >
-          Conocer más
+          {{ $t("btn.learn") }}
         </button>
       </div>
       <div>
